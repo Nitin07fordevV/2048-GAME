@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 game</title>
+    <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body class="min-h-screen bg- flex items-center justify-center">
+    <div id="container" class="w-[480px] md:w-[520px] lg:w-[760px]  min-h-screen flex  justify-center">
+        <div id="main" class="w-[480px] pt-16 md:pt-2">
+            <!-- HEADER PORTION -->
+            <header class="flex justify-between items-center p-2 ">
+                <div id="left">
+                    <span id="tag" class="text-5xl font-bold">2048</span>
+                </div>
+                <div id="right" class="flex ">
+                    <div id="score" class="p-1 flex flex-col rounded text-center">
+                        <span class=" font-semibold text-[#D2D6D6]">SCORE</span>
+                        <span class="text-white text-2xl font-bold">0</span>
+                    </div>
+                    <div id="best-score" class="p-1 flex flex-col ml-2 rounded w-[75px] text-center">
+                        <span class="font-semibold text-[#D2D6D6]">BEST</span>
+                        <span class="text-white text-2xl font-bold ml-3">2048</span>
+                    </div>
+                </div>
+            </header>
+            <!-- NEW GAME PORTION -->
+            <div id="newgame" class="flex p-2 justify-between">
+                <div id="p1" class="flex flex-col text-[#5f554b]">
+                    <span class="font-bold text-xl">Play 2048 Game Online</span>
+                    <span>Join the numbers and get to the</span>
+                    <span class="font-bold ">2048 tile!</span>
+                </div>
+                <button id="newgame_Btn"
+                    class="bg-[#8c7c6d] text-xl text-white font-semibold w-[200px] h-[40px] text-center rounded p-1.5">New
+                    Game</button>
+            </div>
+
+            <!-- GAME-DISPLAY-GRID -->
+            <div class="grid grid-cols-4 gap-2 bg-[#bbada0] p-7 rounded-lg ">
+                <!-- Row 1 -->
+                <div
+                    class="w-24 h-24 bg-[#cdc1b4] rounded flex items-center justify-center text-4xl font-extrabold text-[#5f554b]">
+                    2048</div>
+                <div
+                    class="w-24 h-24 bg-[#cdc1b4] rounded flex items-center justify-center text-4xl font-extrabold text-[#5f554b]">
+                </div>
+                <div
+                    class="w-24 h-24 bg-[#cdc1b4] rounded flex items-center justify-center text-4xl font-extrabold text-[#5f554b]">
+                </div>
+                <div
+                    class="w-24 h-24 bg-[#cdc1b4] rounded flex items-center justify-center text-4xl font-extrabold text-[#5f554b]">
+                </div>
+
+                <!-- Row 2 -->
+                <div
+                    class="w-24 h-24 bg-[#cdc1b4] rounded flex items-center justify-center text-4xl font-extrabold text-[#5f554b]">
+                </div>
+                <div
+                    class="w-24 h-24 bg-[#cdc1b4] rounded flex items-center justify-center text-4xl font-extrabold text-[#5f554b]">
+                </div>
+                <div
+                    class="w-24 h-24 bg-[#cdc1b4] rounded flex items-center justify-center text-4xl font-extrabold text-[#5f554b]">
+                </div>
+                <div
+                    class="w-24 h-24 bg-[#cdc1b4] rounded flex items-center justify-center text-4xl font-extrabold text-[#5f554b]">
+                </div>
+
+                <!-- Row 3 -->
+                <div
+                    class="w-24 h-24 bg-[#cdc1b4] rounded flex items-center justify-center text-4xl font-extrabold text-[#5f554b]">
+                </div>
+                <div
+                    class="w-24 h-24 bg-[#cdc1b4] rounded flex items-center justify-center text-4xl font-extrabold text-[#5f554b]">
+                </div>
+                <div
+                    class="w-24 h-24 bg-[#cdc1b4] rounded flex items-center justify-center text-4xl font-extrabold text-[#5f554b]">
+                </div>
+                <div
+                    class="w-24 h-24 bg-[#cdc1b4] rounded flex items-center justify-center text-4xl font-extrabold text-[#5f554b]">
+                </div>
+
+                <!-- Row 4 -->
+                <div
+                    class="w-24 h-24 bg-[#cdc1b4] rounded flex items-center justify-center text-4xl font-extrabold text-[#5f554b]">
+                </div>
+                <div
+                    class="w-24 h-24 bg-[#cdc1b4] rounded flex items-center justify-center text-4xl font-extrabold text-[#5f554b]">
+                </div>
+                <div
+                    class="w-24 h-24 bg-[#cdc1b4] rounded flex items-center justify-center text-4xl font-extrabold text-[#5f554b]">
+                </div>
+                <div
+                    class="w-24 h-24 bg-[#cdc1b4] rounded flex items-center justify-center text-4xl font-extrabold text-[#5f554b]">
+                </div>
+            </div>
+
+            <!-- HOW-TO-PLAY SECTION -->
+            <div id="how-to-play" class="mt-[120px] text-xl text-[#5f554b] flex flex-col gap-[50px] p-3 ">
+                <div id="xyz">
+                    <span class=" text-[#5f554b] font-bold">HOW TO PLAY :</span>
+                    Use your
+                    <span class=" text-[#5f554b] font-bold">arrow keys</span>
+                    to move the tiles. When two tiles with the
+                    same number touch, they
+                    <span class=" text-[#5f554b] font-bold">merge into one!</span>
+                </div>
+                <div id="xyz2" class="flex flex-col">
+                    <span class="">- Do you still have free time after playing 2048?</span>
+                    <span>- If
+                        <span class="text-[#5f554b] font-bold">NO,</span>
+                        <a href="" class="text-[#5f554b] font-bold underline text-lg">click here</a>
+                        or play
+                        <span class="text-[#5f554b] font-bold underline text-lg">Tetris Online</span>
+                    </span>
+                    <span>- If
+                        <span class="text-[#5f554b] font-bold">YES,</span>
+                        why don't you check the footer :)?
+                    </span>
+                </div>
+                <hr>
+            </div>
+            <!-- Learn-about-game section -->
+            <section id="learn-section"
+                class="flex flex-col items-center text-[18px] font-normal text-[#5f554b] gap-4 p-3">
+                <h1>Learn more about the 2048 Game</h1>
+                <div id="section" class="grid grid-cols-2 grid-rows-2 gap-4">
+                    <a href="" class=" border-[1px] border-[#554444] p-1.5 font-bold px-9 underline text-lg">Tips &
+                        Tricks</a>
+                    <a href="" class=" border-[1px] border-[#554444] p-1.5 font-bold px-9 underline text-lg">2048
+                        Videos</a>
+                    <a href="" class=" border-[1px] border-[#554444] p-1.5 font-bold px-9 underline text-lg">2048
+                        Quotes</a>
+                    <a href="" class=" border-[1px] border-[#554444] p-1.5 font-bold px-9 underline text-lg">2048
+                        Variations</a>
+                </div>
+                <span><span class="text-[#5f554b] font-bold">2048</span> is an easy and fun puzzle game. Even if you
+                    don't love numbers you will love this classic
+                    game. It
+                    is played on a 4x4 grid using the arrows or W, A, S, D keys alternatively. Every time you press a
+                    key -
+                    all tiles slide. Tiles with the same value that bump into one-another are merged. Although there
+                    might
+                    be an optimal strategy to play, there is always some level of chance. If you beat the game and would
+                    like to master it, try to finish with a smaller score. That would mean that you finished with less
+                    moves.
+                </span>
+                <span>This <span class="text-[#5f554b] font-bold">2048 classic </span> game is mobile compatible and you
+                    can play it on any device - iPhone, iPad or
+                    any
+                    other smartphone.
+                </span>
+                <span>Common questions and answers about 2048.
+                    Learn all about 2048's history on wikipedia.
+                    Our 2048 blog and news references
+                </span>
+                <span> Last post: 2048 Game and Children: A Fun Puzzle with Developmental Benefits? (Jul 17,
+                    2025)
+                </span>
+            </section>
+
+            <hr class="mt-6 mb-6">
+
+            <!-- COPYRIGHT SECTION -->
+            <section id="copyright">
+                2048 · Wheel of Names · Poll Maker · Music Poll
+                Privacy Policy
+            </section>
+        </div>
+
+        <script src="script.js"></script>
+</body>
+
+</html>

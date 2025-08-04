@@ -1,0 +1,24 @@
+{
+  "name": "2048-game",
+  "version": "1.0.0",
+  "description": "2048 game using html,css and js",
+  "homepage": "https://github.com/Nitin07fordevV/2048-GAME#readme",
+  "bugs": {
+    "url": "https://github.com/Nitin07fordevV/2048-GAME/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nitin07fordevV/2048-GAME.git"
+  },
+  "license": "ISC",
+  "author": "nitin",
+  "type": "ecmascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "tailwindcss": "^4.1.11"
+  }
+}
